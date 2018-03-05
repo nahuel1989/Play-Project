@@ -66,9 +66,6 @@ public class SupplyController extends Controller {
             }
 
             JsonNode json = request().body().asJson();
-            /*Supply supplyUpdate = Json.fromJson(json, Supply.class);
-            supply = supplyUpdate;
-            supply.update();*/
             supply = Json.fromJson(json, Supply.class);
             supply.update();
             return ok();

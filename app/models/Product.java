@@ -43,4 +43,5 @@ public class Product extends BaseModel{
        return find.all();   
     }
     
+    
 }
