@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+GET     /listSupply						controllers.SupplyController.listSupply()
+GET		/getSupply/:id					controllers.SupplyController.getSupply(id: Long)
+PUT		/supply/:id						controllers.SupplyController.updateSupply(id: Long)
+DELETE 	/supply/:id						controllers.SupplyController.deleteSupply(id: Long)
+POST	/addSupply						controllers.SupplyController.addSupply()
+
+# Product
+GET     /listProduct					controllers.ProductController.listProduct()
+GET		/getProduct/:id					controllers.ProductController.getProduct(id: Long)
+POST	/addProduct						controllers.ProductController.addProduct()
+PUT		/product/:id					controllers.ProductController.updateProduct(id: Long)
+DELETE 	/product/:id					controllers.ProductController.deleteProduct(id: Long)
