@@ -6,6 +6,7 @@
 package models;
 
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import play.data.validation.Constraints;
@@ -26,7 +27,7 @@ public class Product extends BaseModel{
     
     public Boolean active;
     
-    @ManyToMany
+    @ManyToMany(cascade=CascadeType.ALL)
     public List<Supply> supplys;
     
     public Product(){} 
