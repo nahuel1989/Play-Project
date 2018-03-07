@@ -6,7 +6,14 @@
 GET     /                           controllers.Application.index()
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /assets/*file               	controllers.Assets.at(path="/public", file)
+GET     /css/*file              		controllers.Assets.at(path="/public/css", file)
+GET     /css/bootstrap/*file            controllers.Assets.at(path="/public/css/bootstrap", file)
+GET     /js/*file            			controllers.Assets.at(path="/public/js", file)
+GET     /js/jquery/*file            	controllers.Assets.at(path="/public/js/jquery", file)
+GET     /lib/angular/*file            	controllers.Assets.at(path="/public/lib/angular/", file)
+GET     /partials/*file            		controllers.Assets.at(path="/public/partials", file)
+GET     /ngdemo/web/dummy/*file         controllers.Assets.at(path="/public/partials", file)
 
 GET     /listSupply						controllers.SupplyController.listSupply()
 GET		/getSupply/:id					controllers.SupplyController.getSupply(id: Long)
@@ -23,3 +30,7 @@ DELETE 	/product/:id					controllers.ProductController.deleteProduct(id: Long)
 
 # Sale
 POST	/newSale						controllers.SaleController.newSale()
+
+
+
+GET     /hello.html                 	controllers.Assets.at(path="/public", file="index.html")
