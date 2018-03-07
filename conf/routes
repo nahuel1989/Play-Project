@@ -20,3 +20,6 @@ GET		/getProduct/:id					controllers.ProductController.getProduct(id: Long)
 POST	/addProduct						controllers.ProductController.addProduct()
 PUT		/product/:id					controllers.ProductController.updateProduct(id: Long)
 DELETE 	/product/:id					controllers.ProductController.deleteProduct(id: Long)
+
+# Sale
+POST	/newSale						controllers.SaleController.newSale()

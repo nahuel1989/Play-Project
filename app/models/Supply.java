@@ -10,6 +10,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import static models.Product.find;
 import play.data.validation.Constraints;
 
 /**
@@ -28,6 +29,12 @@ public class Supply extends BaseModel {
     public Supply(){}
     
     public static Finder<Long, Supply> find = new Finder<Long, Supply>(Long.class, Supply.class);
+    
+     public static Supply findById( Long _id ){
+           return find.where()
+                   .eq( "id", _id )
+                   .findUnique();
+    }
     
     public String getName() {
         return name;
